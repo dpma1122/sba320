@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='Cuisine' element={<Cuisine />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/Cuisine' element={<Cuisine />} />
        <Route path='*' element={<h1> 404:Page Not Found</h1>} />
       </Routes>
     
