@@ -24,7 +24,34 @@ function App() {
     getData();
   }, []); 
   
-  
+  function loaded() {
+    return (
+      <div>
+        <h1>ForkFul of Flavor</h1>
+        <ul>
+          {Cuisine.map(item => (
+            <li key={item.idCatergory}>
+              {item.strCategory}
+              <button onClick={() => deleteItem(item.idCategory)}>Delete</button>
+           </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  async function deleteItem() {
+    try {
+      await fetch("www.themealdb.com/api/json/v1/1/list.php?c=list")
+      catch(error) {
+        
+      }
+    }
+  }
+
+
+
+  const loading = () => <h1>Loading..</h1>
   
 
   return (
