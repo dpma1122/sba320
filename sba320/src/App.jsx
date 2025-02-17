@@ -15,7 +15,7 @@ function App() {
       try {
         const response = await fetch("www.themealdb.com/api/json/v1/1/list.php?c=list"); 
         const data = await response.json; 
-        setCuisine(data);
+        setCategories(data);
       } catch (error) {
         console.error(error)
       }
@@ -40,14 +40,14 @@ function App() {
     )
   }
 
-  async function deleteItem() {
-    try {
-      await fetch("www.themealdb.com/api/json/v1/1/list.php?c=list")
-      catch(error) {
+  // async function deleteItem() {
+  //   try {
+  //     await fetch("www.themealdb.com/api/json/v1/1/list.php?c=list")
+  //     catch(error) {
         
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 
 
 
