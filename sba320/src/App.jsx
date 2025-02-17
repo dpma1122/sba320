@@ -1,17 +1,28 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {Routes, Route} from "react-router-dom"
 import './App.css'
 import Cuisine from './pages/Cuisine';
 import Home from './pages/Home';
 import Nav from './components/Nav'
+
+
 function App() {
 
 
-
+//gather info from DB
+  useEffect(() => {
+    async function getData() {
+      
+    }
+    getData();
+  }, []); 
+  
+  
+  
 
   return (
     <>
-      <Nav> </Nav>
+      <Nav />
       <Routes>
         <Route path='/Home' element={<Home />} />
         <Route path='/Cuisine' element={<Cuisine />} />
